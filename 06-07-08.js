@@ -4,54 +4,79 @@
   código dentro de las funciones ya definidas. 
   No comentar la funcion 
 */
-function crearClasePersona() {
+function crearClasePersona(){
   class Persona {
-    constructor(nombre, edad, hobbies, amigos) {
-      // El constructor de la clase Persona recibe nombre (string), edad (integer), hobbies (array de strings), amigos (array de objetos)
+    constructor(nombre, edad, hobbies, amigos){
+      // El constructor de la clase Persona recibe
+      // nombre (string), edad (integer), hobbies 
+      // (array de strings), amigos (array de objetos)
       // Inicializar las propiedades de la persona con los valores recibidos como argumento
 
       // Tu código aca:
-
+      this.nombre = nombre;
+      this.edad = edad;
+      this.hobbies = hobbies;
+      this.amigos = amigos;
     }
+  };
+  return Persona
+}
 
-    addFriend(nombre, edad) {
-      // El método 'addFriend' recibe un string 'nombre' y un entero 'edad' y debe agregar un objeto:
-      // { nombre: nombre, edad: edad} al arreglo de amigos de la persona.
+    addFriend(nombre, edad); {
+      // El método 'addFriend' recibe un string 
+      // 'nombre' y un entero 'edad' y debe agregar
+      // un objeto:
+      // { nombre: nombre, edad: edad} al arreglo 
+      // de amigos de la persona.
       // No debe retornar nada.
 
       // Tu código aca:
-
+      amigos = nuevoAmigo = {nombre, edad};
+      this.amigos.push(nuevosAmigos);
     }
-
-    addHobby(hobby) {
-      // El método 'addHobby' recibe un string 'hobby' y debe agregarlo al arreglo de hobbies de la persona.
+    
+    addHobby(hobby); {
+      // El método 'addHobby' recibe un string 
+      // 'hobby' y debe agregarlo al arreglo de 
+      // hobbies de la persona.
       // No debe retornar nada.
 
       // Tu código aca:
-
+      this.hobbies.push(hobby);
     }
-    getFriends() {
-      // El método 'getFriends' debe retornar un arreglo con sólo los nombres del arreglo de amigos
+
+    getFriends(); {
+      // El método 'getFriends' debe retornar un 
+      // arreglo con sólo los nombres del arreglo 
+      // de amigos
       // de la persona.
       // Ej:
-      // Suponiendo que la persona tiene estos amigos: [{nombre: 'martin', edad: 31},{nombre: 'toni', edad: 33}]
-      // persona.getFriends() debería devolver ['martin', 'toni']
+      // Suponiendo que la persona tiene estos amigos: 
+      // [{nombre: 'martin', edad: 31},{nombre: 'toni', 
+      // edad: 33}] persona.getFriends() debería 
+      // devolver ['martin', 'toni']
 
       // Tu código aca:
-
+      this.amigos.map (function(amigo){
+        return amigo.nombre;
+      })
     }
 
-    getHobbies() {
-      // El método 'getHobbies' debe retornar un arreglo con los hobbies de la persona
+    getHobbies(); {
+      // El método 'getHobbies' debe retornar un arreglo
+      // con los hobbies de la persona
       // Ej:
-      // persona.getHobbies() debe devolver ['correr', 'dormir', 'nadar']
+      // persona.getHobbies() debe devolver 
+      // ['correr', 'dormir', 'nadar']
 
       // Tu código aca:
-
+       this.hobbies;
     }
 
-    getPromedioEdad() {
-      // El método 'getPromedioEdad' debe retornar el promedio de edad de los amigos de una persona
+    getPromedioEdad(); { 
+      // El método 'getPromedioEdad' debe retornar
+      // el promedio de edad de los amigos de una 
+      // persona
       // Ej:
       // Si la persona tuviera estos amigos:
       // {
@@ -59,19 +84,25 @@ function crearClasePersona() {
       //     nombre: 'toni',
       //     edad: 33,
       //   }, {
-      //     nombre: 'Emi',
+      //     nombre: 'Emi'
       //     edad: 25
       //   }]
       // }
-      // persona.getPromedioEdad() debería devolver 29 ya que (33 + 25) / 2 = 29
+      // persona.getPromedioEdad() debería 
+      // devolver 29 ya que (33 + 25) / 2 = 29
 
       // Tu código aca:
-
+      obtenerPromedioEdad();{
+        let Amigos = this.amigos;
+        let CA = Amigos.length;
+        let sumaEdades = 0
+        for(let i=0; i<Amigos.length; i++){
+          sumaEdades += Amigos[i].edad;
+      }
+      return sumaEdades / CA;
     }
+    return Persona;
   };
-
-  return Persona;
-}
 
 // No modifiques nada debajo de esta linea //
 
